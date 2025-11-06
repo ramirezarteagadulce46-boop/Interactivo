@@ -1,11 +1,437 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img width="200px" src="planta.jpg">
+<html>
+    <head>
+        <style>
+    #titulo-info{
+      color: rgb(0, 0, 0);
+      text-align: center;
+      }
+    #texto-info{
+      color: white;
+      text-align: center;
+      }
+    #header {
+      background-color: #7e3307;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    .nav{
+       padding-right: 20px; 
+    }
+
+    .nav ul li{
+      display:inline;
+      padding:0 10px
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      margin: 8px;
+    }
+    #seccion {
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap
+    }
+
+    .barra {
+      padding: 5px;
+      margin:5px;
+      background: #fd9d30;
+      flex:3;
+      border-radius:10px;
+      display:flex;
+      flex-flow:column;
+      align-items:center;
+    }
+
+    .contenido {
+      padding: 10px;
+      border-radius:10px;
+      background: #fd9d30;
+      margin:5px;
+      flex:1;
+      min-width: 300px; 
+    }
+
+    .subcontenido2 {
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    #resultado {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+   #resultado img {
+      display: block;
+      margin: 10px auto;
+      border-radius: 10px;
+    }
+  
+    #boton-reiniciar {
+      background-color: #7e3307;
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #boton-reiniciar:hover {
+      background-color: #9a4510;
+    }
+    #calif {
+      display: block;
+      text-align: center;
+      margin-top: 5px;
+    }
+    
+    #footer {
+      background-color: #7e3307;
+      text-align: center;
+      padding: 5px;
+      border-radius: 10px;
+      display:flex;
+      flex-flow:row;
+ 
+    }
+    .pie {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    #galeria{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap; 
+      height:100px;
+    }
+
+    .proyecto{
+      
+      height:150px;
+      max-width:150px;
+      background-color:#ffffff;
+      border-radius:10px;
+      margin:10px;
+      flex:1 100px;
+    }
+
+    .barra a {
+      display:block;
+    }
+    #imagen-interactiva {
+      position: relative;
+      width: 200px;
+      height: 600px;
+      background-image: url('imagenes/girasol.png');
+      background-size: cover;
+      border: 2px solid #000;
+      border-radius: 10px;
+    }
+
+    #hotspot1 {
+      position: absolute;
+      top: 250px;
+      left: 80px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #hotspot2 {
+      position: absolute;
+      top: 500px;
+      left: 87px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #hotspot3 {
+      position: absolute;
+      top: 350px;
+      left: 80px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+     #hotspot4 {
+      position: absolute;
+      top: 20px;
+      left: 75px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+     #hotspot5 {
+      position: absolute;
+      top: 70px;
+      left: 75px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .text-hotspot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    #instrucciones {
+      flex:1;
+      cursor: pointer;
+    }
+
+    #prueba {
+      flex:1;
+      cursor:pointer;
+    }
+
+    .texto-morado{
+            font-size:40px;
+            font-weight: bold;
+            color:#b428c4;
+    }
+        </style>
+    </head>
+    <body>
+        <div id="fondo">
+    <div id="header">
+    <div class="nav" style="text-align:center;">
+      <h2>"Partes de una planta y su funcion"</h3>
+    </div>
+  </div>
+  <div id="seccion" style="display: flex; flex-direction: row;">
+    <div class="barra">
+        <div id="imagen-interactiva">
+          <div id="hotspot1"><span class="text-hotspot">3</span></div>
+          <div id="hotspot2"><span class="text-hotspot">5</span></div>
+          <div id="hotspot3"><span class="text-hotspot">4</span></div>
+          <div id="hotspot4"><span class="text-hotspot">1</span></div>
+          <div id="hotspot5"><span class="text-hotspot">2</span></div>
+
+        </div>
+    </div>
+    <div class="contenido">
+      <div class="subcontenido1">
+        <h2 id="titulo-info">Selecciona instrucciones o test</h2>
+        <p id="texto-info"></p>
+      </div>
+      <div class="subcontenido2">
+        <div class="proyecto">
+          <img id="imagen-info" src="imagenes/cursor.png" alt="Imagen info" style="width: 100%; height: 100%;">
+        </div>
+      </div>
+      <div id="resultado" style="display: none;">
+        <h2>Resultado:</h2>
+        <span id="calif" class="texto-morado"> 0/10 </span> 
+        <img id="imagen-resultado" width="200px" src="imagenes/annie2.gif" style="display: none;"/>
+        <img id="imagen-resultado" width="200px" src="imagenes/annie.gif" style="display: none;"/>
+        <button id="boton-reiniciar">Reiniciar</button>
+      </div>      
+    </div>
+  </div>
+  <div id="footer">
+    <div id="instrucciones"><img width="100px" src="imagenes/instrucciones.png" /></div>
+    <div id="prueba"><img width="100px" src="imagenes/test.png" /></div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    let puntaje = 0;
+    let pregunta1 = "";
+
+    document.getElementById('hotspot1').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Tallo';
+      document.getElementById('texto-info').textContent = 'El tallo es la parte aerea de la planta que entre sus funciones tiene la de dar soporte y estructura a la misma, sosteniendo sus otros organos vegetales aereos, como las hojas y las flores';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/tallo.png');    
+    };
+
+    document.getElementById('hotspot2').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Raices';
+      document.getElementById('texto-info').textContent = 'Las raices son el primer organo que las plantas desarrollan cuando germinan, y podria decirse que el mas importante. Una de las principales funciones de las raices es la de absorber agua y nutrientes por los pequenos pelos absorbentes de los que disponen, alimentos que luego transmiten al resto de la planta a traves del tallo.';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/raices.png');
+    };
+
+     document.getElementById('hotspot3').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Hojas';
+      document.getElementById('texto-info').textContent = 'Son organos vegetales, habitualmente de grosor muy fino y de color verde, que crecen de las ramas o tallo de las plantas. Las hojas cumplen principalmente con tres grandes funciones: Realizan la fotosintesis, y obtienen asi energia quimica de los rayos solares. Permiten respirar a la planta, haciendo el intercambio de gases por la noche. Pueden llegar a transpirar, dejando escapar por ellas el exceso de agua';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/hoja.png');
+    };
+
+     document.getElementById('hotspot4').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Flor';
+      document.getElementById('texto-info').textContent = 'La flor, la parte mas vistosa para las personas en el caso de muchas plantas, es la encargada de la reproduccion de la planta. muchas veces, las flores son de colores tan llamativos: para atraer a los insectos polinizadores. No obstante, todas las plantas se reproducen por flores.';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/flor.png');
+    };
+
+     document.getElementById('hotspot5').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Fruto o fruta';
+      document.getElementById('texto-info').textContent = 'Cualquier fruta que suelas comer es el fruto de una planta o de un arbol, pero tambien lo son los frutos que comemos como frutos secos. La funcion del fruto tiende a ser la de proteger la semilla y a la vez facilitar la dispersion de esta mediante la actividad animal, que consumiran los frutos y depositaran las semillas en otros lugares';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/fruto.png');
+    };
+
+    document.getElementById('instrucciones').onclick = function(){
+      document.getElementById('titulo-info').textContent = 'Instrucciones';
+      document.getElementById('texto-info').textContent = 'Presiona los numeros para ver la informacion. Ya estudiado, realiza el test de conocimientos.';
+      document.getElementById('imagen-info').setAttribute('src', 'images/hotspot-cursor.png');
+    };
+    document.getElementById('instrucciones').onclick = function(){
+      document.getElementById('titulo-info').textContent = 'Instrucciones';
+      document.getElementById('texto-info').textContent = 'Haz click en cada uno de los puntos de la imagen para ver la informacion. Una vez visualizado el interactivo, realiza el test de conocimientos.';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/cursor.png');
+    };
+
+    document.getElementById('prueba').onclick = function(){
+      alert("Prueba de conocimientos");
+      alert("Elige la respuesta correcta para ganar");
+
+        if(pregunta1 = prompt("¿Cual es la parte que le da estructura y soporte a la planta?\n a)Tallo\n b)Raiz\n c)Hojas")){
+            pregunta1 = pregunta1.trim();
+            
+        }
+        if (pregunta1.toLowerCase() === "a") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es a)Tallo.");
+        }
+        if(pregunta2 = prompt("¿Cual es el organo mas importante de una planta?\n a)Hojas\n b)Raices\n c)Flores")){
+            pregunta2 = pregunta2.trim();
+            
+        }
+        if (pregunta2.toLowerCase() === "b") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es b)Raices.");
+        }
+        if(pregunta3 = prompt("¿Cual es una de las principales funciones de las raices?\n a)Sostener la flor\n b)Absorber agua y nutrientes\n c)Realizar la fotosintesis")){
+            pregunta3 = pregunta3.trim();
+            
+        }
+        if (pregunta3.toLowerCase() === "b") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es b)Absorber agua y nutrientes.");
+        }
+        if(pregunta4 = prompt("¿A traves de que transmiten los alimentos las plantas?\n a)Hojas\n b)Tallo\n c)Raices")){
+            pregunta4 = pregunta4.trim();
+            
+        }
+        if (pregunta4.toLowerCase() === "c") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es c)Raices.");
+        }
+        if(pregunta5 = prompt("¿Como se reproducen las plantas?\n a)Por flores\n b)Por hojas\n c)Por raices")){
+            pregunta5 = pregunta5.trim();
+            
+        }
+        if (pregunta5.toLowerCase() === "a") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es a)Por flores.");
+        }
+        if(pregunta6 = prompt("¿Cual es la parte mas vistosa de una planta?\n a)Tallo\n b)Hojas\n c)Flor")){
+            pregunta6 = pregunta6.trim();
+            
+        }
+        if (pregunta6.toLowerCase() === "c") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es c)Flor.");
+        }
+        if(pregunta7 = prompt("¿Que obtiene de los rayos solares las plantas?\n a)Energia quimica\n b)Agua\n c)Nutrientes")){
+            pregunta7 = pregunta7.trim();
+            
+        }
+        if (pregunta7.toLowerCase() === "a") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es a)Energia quimica.");
+        }
+        if(pregunta8 = prompt("¿Que funcion tienen las hojas?\n a)Realizar la fotosintesis\n b)Producir flores\n c)Absorber agua")){
+            pregunta8 = pregunta8.trim();
+            
+        }
+        if (pregunta8.toLowerCase() === "a") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es a)Realizar la fotosintesis.");
+        }
+        if(pregunta9 = prompt("¿Que es lo que atrae a los insectos a polinisar?\n a)El olor\n b)Los colores llamativos\n c)El fruto")){
+            pregunta9 = pregunta9.trim();
+            
+        }
+        if (pregunta9.toLowerCase() === "b") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es b)Los colores llamativos.");
+        }
+        if(pregunta10 = prompt("¿Como se llama lo que crece en las ramas o tallos de las plantas?\n a)Hojas\n b)Flores\n c)Frutos")){
+            pregunta10 = pregunta10.trim();
+            
+        }
+        if (pregunta10.toLowerCase() === "a") {
+            alert("Es correcto.");
+            puntaje += 1;
+        } else {
+            alert("Incorrecto. La respuesta es a)Hojas.");
+        }
+
+
+        if(puntaje >= 6) {
+            alert("Felicidades! Has respondido correctamente todas las preguntas.");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("imagen-resultado").setAttribute("src", 'imagenes/annie2.gif');
+            document.getElementById("imagen-resultado").style.display = "block";
+            document.getElementById("resultado").style.display = "block";
+            
+        } else {
+            alert("Has respondido " + puntaje + " preguntas correctamente.");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("imagen-resultado").setAttribute("src", 'imagenes/annie.gif');
+            document.getElementById("imagen-resultado").style.display = "block";
+            document.getElementById("resultado").style.display = "block";
+        }
+  }
+            document.getElementById('boton-reiniciar').onclick = function() {
+            puntaje = 0;
+            document.getElementById("resultado").style.display = "none";
+            document.getElementById("imagen-resultado").style.display = "none";
+            document.getElementById("calif").textContent = "0/10";
+            alert("Puedes volver a realizar el test para tener una mejor calificacion.");
+  };
+  </script>
 </body>
 </html>
