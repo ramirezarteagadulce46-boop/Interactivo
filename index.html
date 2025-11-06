@@ -190,7 +190,16 @@
       border-radius: 50%;
       cursor: pointer;
     }
-
+    #hotspot6 {
+      position: absolute;
+      top: 500px;
+      left: 80px;
+      width: 40px;
+      height: 20px;
+      background-color: #b428c4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
     .text-hotspot {
       position: absolute;
       top: 50%;
@@ -232,6 +241,7 @@
           <div id="hotspot3"><span class="text-hotspot">4</span></div>
           <div id="hotspot4"><span class="text-hotspot">1</span></div>
           <div id="hotspot5"><span class="text-hotspot">2</span></div>
+          <div id="hotspot6"><span class="text-hotspot">6</span></div>
 
         </div>
     </div>
@@ -288,9 +298,15 @@
     };
 
      document.getElementById('hotspot5').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Fruto o fruta';
-      document.getElementById('texto-info').textContent = 'Cualquier fruta que suelas comer es el fruto de una planta o de un arbol, pero tambien lo son los frutos que comemos como frutos secos. La funcion del fruto tiende a ser la de proteger la semilla y a la vez facilitar la dispersion de esta mediante la actividad animal, que consumiran los frutos y depositaran las semillas en otros lugares';
+      document.getElementById('titulo-info').textContent = 'Fruto ';
+      document.getElementById('texto-info').textContent = 'Se desarrolla a partir de las flores y su funcion principal es proteger las semillas y facilitar su dispersion';
       document.getElementById('imagen-info').setAttribute('src', 'imagenes/fruto.png');
+    };
+
+      document.getElementById('hotspot6').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Semillas';
+      document.getElementById('texto-info').textContent = 'Contienen el embrion de una nueva planta y los nutrientes necesarios para su germinacion';
+      document.getElementById('imagen-info').setAttribute('src', 'imagenes/semillas.png');
     };
 
     document.getElementById('instrucciones').onclick = function(){
@@ -307,7 +323,7 @@
     document.getElementById('prueba').onclick = function(){
       alert("Prueba de conocimientos");
       alert("Elige la respuesta correcta para ganar");
-
+C
         if(pregunta1 = prompt("¿Cual es la parte que le da estructura y soporte a la planta?\n a)Tallo\n b)Raiz\n c)Hojas")){
             pregunta1 = pregunta1.trim();
             
